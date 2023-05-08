@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17em;
+    height: 28.88em;
+    border: 2px dashed #C4C4C4;
+    background: #F0F9FF;
+    border-radius: 0.33em;
+}
+.iconMessageBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+}
+.blueText {
+    font-size: 0.77em;
+    color: #5D5FEF;
+    font-weight: 500;
+}
+.grayText {
+    font-size: 0.66em;
+    color: #6B7280;
+    font-weight: 500;
+}
