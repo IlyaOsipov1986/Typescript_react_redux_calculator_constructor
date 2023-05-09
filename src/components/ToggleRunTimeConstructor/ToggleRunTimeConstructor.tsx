@@ -24,11 +24,11 @@ const ToggleRunTimeConstructor: FC = () => {
         <div className={styles.container}>
             <div className={styles.buttonsBlock}>
                 <div onClick={() => onHandleToggleRunTime()} className={isActiveToggleRunTime ? styles.runtimeButtonActive : styles.runtimeButton}>
-                    <img src={isActiveToggleRunTime ? eyeActiveIcon : eyeIcon} alt="icon"/>
+                    <img className={styles.iconButtons} src={isActiveToggleRunTime ? eyeActiveIcon : eyeIcon} alt="icon"/>
                     <p className={styles.buttonsText}>Runtime</p>
                 </div>
                 <div onClick={() => onHandleToggleConstructor()} className={isActiveToggleConstructor ? styles.constructorButtonActive : styles.constructorButton}>
-                    <img src={isActiveToggleConstructor ? selectorActivIcon : selectorIcon} alt="icon"/>
+                    <img className={styles.iconButtons} src={isActiveToggleConstructor ? selectorActivIcon : selectorIcon} alt="icon"/>
                     <p className={styles.buttonsText}>Constructor</p>
                 </div>
             </div>

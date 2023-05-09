@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 3.33em;
+    box-shadow: 0 4px 4px 0 #00000040;
+    padding: 0.22em 0.22em;
+    border-radius: 0.44em;
+}
+.equalsButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: #5D5FEF;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0.22em 0.44em 0.22em 0.44em;
+    cursor: pointer;
+}
