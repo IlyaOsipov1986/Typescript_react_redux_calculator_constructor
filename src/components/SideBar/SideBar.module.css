@@ -2,6 +2,6 @@
     display: flex;
     flex-direction: column;
     width: 18em;
-    gap: 0.44em;
+    gap: 1em;
     justify-content: space-between;
 }

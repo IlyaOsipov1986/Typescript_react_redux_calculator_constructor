@@ -37,7 +37,7 @@ export const numberList = [
     {
         id: 8,
         value: 8,
-        label: '9'
+        label: '8'
     },
     {
         id: 9,
