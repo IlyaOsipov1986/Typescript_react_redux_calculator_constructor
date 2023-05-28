@@ -2,17 +2,35 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.88em;
-    box-shadow: 0 4px 4px 0 #00000040;
+    box-shadow: 1px 1px 4px 2px #00000040;
     padding: 0.22em 0.22em;
     border-radius: 0.44em;
+    cursor: grab;
+}
+.containerNotDrag {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.88em;
+    box-shadow: 1px 1px 4px 2px #00000040;
+    padding: 0.22em 0.22em;
+    border-radius: 0.44em;
+    cursor: default;
 }
 .numberButtons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: 1px solid #E2E3E5;
     border-radius: 0.33em;
     width: 4em;
     height: 2.66em;
-    cursor: pointer;
+    cursor: grab;
 }
+.numberButtonsNotDrag {
+    border: 1px solid #E2E3E5;
+    border-radius: 0.33em;
+    width: 4em;
+    height: 2.66em;
+    cursor: default;
+}
+/*.numberButtonsNotDrag:active {*/
+/*    background: #5D5FEF;*/
+/*    color: #FFFFFF;*/
+/*}*/

@@ -12,6 +12,8 @@ function useShowNumbers (isToolsList: IShowNumbers[]) {
         const findType = isToolsList.find(el => el.itemSideBar === 'numbers')
         if (findType !== undefined) {
             setValue(true)
+        } else {
+            setValue(false)
         }
     },[isToolsList])
 

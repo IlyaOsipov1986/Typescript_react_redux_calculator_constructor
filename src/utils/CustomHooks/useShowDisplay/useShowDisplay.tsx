@@ -12,6 +12,8 @@ function useShowDisplay (isToolsList: IShowDisplay[]) {
         const findType = isToolsList.find(el => el.itemSideBar === 'display')
         if (findType !== undefined) {
             setValue(true)
+        } else {
+            setValue(false)
         }
     },[isToolsList])
 

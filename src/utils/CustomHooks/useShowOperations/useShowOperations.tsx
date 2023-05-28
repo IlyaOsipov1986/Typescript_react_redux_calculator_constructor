@@ -12,6 +12,8 @@ function useShowOperations (isToolsList: IShowOperations[]) {
         const findType = isToolsList.find(el => el.itemSideBar === 'operations')
         if (findType !== undefined) {
             setValue(true)
+        } else {
+            setValue(false)
         }
     },[isToolsList])
 

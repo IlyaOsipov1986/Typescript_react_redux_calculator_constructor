@@ -12,6 +12,8 @@ function useShowEquals (isToolsList: IShowEquals[]) {
         const findType = isToolsList.find(el => el.itemSideBar === 'equals')
         if (findType !== undefined) {
             setValue(true)
+        } else {
+            setValue(false)
         }
     },[isToolsList])
 

@@ -13,6 +13,7 @@ import useShowOperations from "../../utils/CustomHooks/useShowOperations/useShow
 
 interface CanvasProps {
     isToolsList: IToolList[];
+    isActiveRunTimeMode: boolean;
     handleDragOver: (e: React.DragEvent) => void;
     handleOnDrop: (e: React.DragEvent) => void;
     handleOnDrag: (e: React.DragEvent, typeSideBar: string) => void;
@@ -22,6 +23,7 @@ const Canvas: FC<CanvasProps> = (props) => {
 
     const {
         isToolsList,
+        isActiveRunTimeMode,
         handleDragOver,
         handleOnDrop,
         handleOnDrag
@@ -37,6 +39,7 @@ const Canvas: FC<CanvasProps> = (props) => {
     // @ts-ignore
     const [isShowOperations, setShowOperations] = useShowOperations(isToolsList);
 
+
     useEffect(() => {
         let isMounted = true;
         if (isToolsList.length !== 0) {
@@ -48,8 +51,6 @@ const Canvas: FC<CanvasProps> = (props) => {
             isMounted = false;
         }
     },[isToolsList])
-
-    console.log(isToolsList)
 
     return (
         <div onDrop={handleOnDrop} onDragOver={handleDragOver} className={styles.container}>
@@ -63,21 +64,29 @@ const Canvas: FC<CanvasProps> = (props) => {
                         </div>
                     </div>
             ) : (
-                    <div className={styles.containerCalculatorTools}>
+                    <div className={isActiveRunTimeMode ? styles.containerCalculatorTools : styles.containerCalculatorToolsNoEvents}>
                         {isShowDisplay ?
                             <Display
+                                isActiveRunTimeMode={isActiveRunTimeMode}
+                                isToolsList={isToolsList}
                                 handleOnDrag={handleOnDrag}
                             /> : <div className={styles.containerEmptyDisplay}/>}
                         {isShowOperations ?
                             <Operations
+                                isActiveRunTimeMode={isActiveRunTimeMode}
+                                isToolsList={isToolsList}
                                 handleOnDrag={handleOnDrag}
                             /> : <div className={styles.containerEmptyOperations}/>}
                         {isShowNumbers ?
                             <Numbers
+                                isActiveRunTimeMode={isActiveRunTimeMode}
+                                isToolsList={isToolsList}
                                 handleOnDrag={handleOnDrag}
                             /> : <div className={styles.containerEmptyNumbers}/>}
                         {isShowEquals ?
                             <Equals
+                                isActiveRunTimeMode={isActiveRunTimeMode}
+                                isToolsList={isToolsList}
                                 handleOnDrag={handleOnDrag}
                             /> : <div className={styles.containerEmptyEquals}/>}
                     </div>

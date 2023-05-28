@@ -1,23 +1,29 @@
-import React, {FC, useState} from "react";
+import React, {FC} from "react";
 import styles from "../../CalculatorTools/Display/Display.module.css";
+import {IToolList} from "../../../types/toolList.tsx";
+import useShowDisplay from "../../../utils/CustomHooks/useShowDisplay/useShowDisplay.tsx";
 
 interface DisplayProps {
+    isToolsList: IToolList[];
+    isActiveRunTimeMode?: boolean;
     handleOnDrag: (e: React.DragEvent, typeSideBar: string) => void;
 }
 
 const Display: FC<DisplayProps> = (props) => {
 
     const {
+        isToolsList,
+        isActiveRunTimeMode,
         handleOnDrag
     } = props;
 
-    const [isNotActiveTool, setNotActiveTool] = useState(true);
+    const [isNotActiveDrag] = useShowDisplay(isToolsList)
 
     return (
-        <div className={isNotActiveTool ? styles.containerNotActive : styles.container}
+        <div className={isNotActiveDrag ? styles.containerNotDrag : styles.container}
             onDragStart={(e) => handleOnDrag(e, 'display')}
-            draggable={true}>
-            <input className={styles.displayInput}
+            draggable={!isNotActiveDrag}>
+            <input className={isNotActiveDrag ? styles.displayInputNotDrag : styles.displayInput}
                 type={"text"}
                 placeholder={'0'}
                 disabled={true}

@@ -1,7 +1,19 @@
 .container {
     display: inline-flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 1.33em;
+}
+.containerReset {
+    cursor: pointer;
+    width: 1.33em;
+    height: 1.33em;
+}
+.containerResetHide {
+    visibility: hidden;
+}
+.containerButtonsBlock {
+    display: inline-flex;
 }
 .buttonsBlock {
     display: flex;
