@@ -2,7 +2,7 @@ import './App.css'
 import React, {FC, useState} from "react";
 import ToggleRunTimeConstructor from "../ToggleRunTimeConstructor/ToggleRunTimeConstructor.tsx";
 import SideBar from "../SideBar/SideBar.tsx";
-import Canvas from "../ Canvas/ Canvas.tsx";
+import Canvas from "../Canvas/Canvas.tsx";
 import {IToolList} from "../../types/toolList.tsx";
 
 const App: FC = () => {

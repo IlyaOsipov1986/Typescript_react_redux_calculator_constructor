@@ -51,7 +51,12 @@ export const numberList = [
     },
     {
         id: 11,
-        value: ',',
-        label: ','
+        value: '.',
+        label: '.'
     },
+    {
+        id: 12,
+        value: 'C',
+        label: 'C'
+    }
 ]

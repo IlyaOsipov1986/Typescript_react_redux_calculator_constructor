@@ -3,6 +3,7 @@ import styles from "../../CalculatorTools/Numbers/Numbers.module.css"
 import {numberList} from "../../../utils/numberList.tsx";
 import {IToolList} from "../../../types/toolList.tsx";
 import useShowNumbers from "../../../utils/CustomHooks/useShowNumbers/useShowNumbers.tsx";
+import useCalculatorContext from "../../../utils/CustomHooks/useCalculatorContext/useCalculatorContext.tsx";
 
 interface NumbersProps {
     isToolsList: IToolList[];
@@ -18,10 +19,20 @@ const Numbers: FC<NumbersProps> = (props) => {
         handleOnDrag
     } = props
 
+    const { calc, setCalc } = useCalculatorContext();
     const [isNotActiveDrag] = useShowNumbers(isToolsList);
 
-    const onNumbers = (number: string | number) => {
-        console.log(number)
+    const commaClick = () => {
+        setCalc({...calc, num: 29
+        })
+    }
+
+    const onHandleNumber = (value: string | number) => {
+        switch (value) {
+            case '.' : commaClick()
+                break;
+            default: return
+        }
     }
 
     return (
@@ -32,7 +43,7 @@ const Numbers: FC<NumbersProps> = (props) => {
                 return (
                     <button key={el.id}
                             disabled={!isActiveRunTimeMode}
-                            onClick={() => onNumbers(el.value)}
+                            onClick={() => onHandleNumber(el.value)}
                             className={isNotActiveDrag ? styles.numberButtonsNotDrag : styles.numberButtons}>
                         {el.label}
                     </button>

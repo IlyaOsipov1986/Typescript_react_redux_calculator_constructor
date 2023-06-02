@@ -1,23 +1,20 @@
-import {createContext, useState, ReactNode} from "react";
-
-interface ICalcContextProps {
-    children: ReactNode | ReactNode[]
-}
-
-interface Inim {
-    isList: string
-}
+import {createContext, useState} from "react";
+import {calcType, ICalcContextProps} from "../types/calcContext.tsx"
 
 const CalculatorContext = createContext({});
 
 export const CalculatorContextProvider = ({children}: ICalcContextProps) => {
 
-    const [isList, setList] = useState<Inim[]>([]);
+    const [calc, setCalc] = useState<calcType>({
+        sign: '',
+        num: 0,
+        res: 0
+    })
 
     return (
         <CalculatorContext.Provider value={{
-            isList,
-            setList
+            calc,
+            setCalc
         }}>
             {children}
         </CalculatorContext.Provider>

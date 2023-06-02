@@ -23,7 +23,7 @@ const Equals: FC<EqualsProps> = (props) => {
         <div className={isNotActiveDrag ? styles.containerNotDrag : styles.container}
              onDragStart={(e) => handleOnDrag(e, 'equals')}
              draggable={!isNotActiveDrag}>
-            <button className={isNotActiveDrag ? styles.equalsButtonNotDrag : styles.equalsButton}>
+            <button className={isNotActiveDrag ? styles.equalsButtonNotDrag : styles.equalsButton} disabled={!isActiveRunTimeMode}>
                 <span>=</span>
             </button>
         </div>

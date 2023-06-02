@@ -1,7 +1,8 @@
-import React, {FC} from "react";
+import React, {FC, useEffect} from "react";
 import styles from "../../CalculatorTools/Display/Display.module.css";
 import {IToolList} from "../../../types/toolList.tsx";
 import useShowDisplay from "../../../utils/CustomHooks/useShowDisplay/useShowDisplay.tsx";
+import useCalculatorContext from "../../../utils/CustomHooks/useCalculatorContext/useCalculatorContext.tsx";
 
 interface DisplayProps {
     isToolsList: IToolList[];
@@ -17,7 +18,14 @@ const Display: FC<DisplayProps> = (props) => {
         handleOnDrag
     } = props;
 
-    const [isNotActiveDrag] = useShowDisplay(isToolsList)
+    const { calc } = useCalculatorContext();
+    const [isNotActiveDrag] = useShowDisplay(isToolsList);
+
+    useEffect(() => {
+
+    },[isActiveRunTimeMode])
+
+    console.log(isActiveRunTimeMode)
 
     return (
         <div className={isNotActiveDrag ? styles.containerNotDrag : styles.container}
@@ -25,8 +33,10 @@ const Display: FC<DisplayProps> = (props) => {
             draggable={!isNotActiveDrag}>
             <input className={isNotActiveDrag ? styles.displayInputNotDrag : styles.displayInput}
                 type={"text"}
+                value={isActiveRunTimeMode !== undefined ? '' : calc.num ? calc.num : calc.res}
                 placeholder={'0'}
-                disabled={true}
+                disabled={false}
+                readOnly={true}
             />
         </div>
     )

@@ -23,6 +23,7 @@ const SideBar: FC<SideBarProps> = (props) => {
     return (
         <div className={isActiveRunTimeMode ? styles.containerRunTimeMode : styles.container}>
             <Display
+                isActiveRunTimeMode={isActiveRunTimeMode}
                 isToolsList={isToolsList}
                 handleOnDrag={handleOnDrag}
             />

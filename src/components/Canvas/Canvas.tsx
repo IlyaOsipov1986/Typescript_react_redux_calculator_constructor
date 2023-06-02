@@ -1,6 +1,5 @@
 import React, {FC, useEffect, useState} from "react";
-import useCalculatorContext from "../../utils/CustomHooks/useCalculatorContext/useCalculatorContext.tsx";
-import styles from "../ Canvas/ Canvas.module.css";
+import styles from "./Canvas.module.css";
 import emptyIcon from "../../img/emptyBlock.svg";
 import Display from "../CalculatorTools/Display/Display.tsx";
 import Equals from "../CalculatorTools/Equals/Equals.tsx";
@@ -30,15 +29,12 @@ const Canvas: FC<CanvasProps> = (props) => {
         handleOnDrag
     } = props;
 
-    // @ts-ignore
-    const {isList} = useCalculatorContext();
     const [isHideCanvasEmpty, setHideCanvasEmpty] = useState(true);
     const [isShowDisplay] = useShowDisplay(isToolsList);
     const [isShowEquals] = useShowEquals(isToolsList);
     const [isShowNumbers] = useShowNumbers(isToolsList);
     const [isShowOperations] = useShowOperations(isToolsList);
 
-    console.log(isList)
 
     useEffect(() => {
         let isMounted = true;
@@ -67,7 +63,6 @@ const Canvas: FC<CanvasProps> = (props) => {
                     <div className={isActiveRunTimeMode ? styles.containerCalculatorTools : styles.containerCalculatorToolsNoEvents}>
                         {isShowDisplay ?
                             <Display
-                                isActiveRunTimeMode={isActiveRunTimeMode}
                                 isToolsList={isToolsList}
                                 handleOnDrag={handleOnDrag}
                             /> : <div className={styles.containerEmptyDisplay}/>}
