@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from "react";
+import React, {FC} from "react";
 import styles from "../../CalculatorTools/Display/Display.module.css";
 import {IToolList} from "../../../types/toolList.tsx";
 import useShowDisplay from "../../../utils/CustomHooks/useShowDisplay/useShowDisplay.tsx";
@@ -20,12 +20,6 @@ const Display: FC<DisplayProps> = (props) => {
 
     const { calc } = useCalculatorContext();
     const [isNotActiveDrag] = useShowDisplay(isToolsList);
-
-    useEffect(() => {
-
-    },[isActiveRunTimeMode])
-
-    console.log(isActiveRunTimeMode)
 
     return (
         <div className={isNotActiveDrag ? styles.containerNotDrag : styles.container}

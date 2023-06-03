@@ -5,7 +5,7 @@ const CalculatorContext = createContext({});
 
 export const CalculatorContextProvider = ({children}: ICalcContextProps) => {
 
-    const [calc, setCalc] = useState<calcType>({
+    const[calc, setCalc] = useState<calcType>({
         sign: '',
         num: 0,
         res: 0
