@@ -30,26 +30,23 @@
 .containerCalculatorTools {
     display: flex;
     flex-direction: column;
-    gap: 1em;
-    height: 100%;
-    justify-content: space-between;
 }
 .containerCalculatorToolsNoEvents {
     display: flex;
     flex-direction: column;
-    gap: 1em;
-    height: 100%;
-    justify-content: space-between;
     pointer-events: none;
 }
 .containerEmptyDisplay {
     height: 3.33em;
+    margin-bottom: 1.33em;
 }
 .containerEmptyOperations {
     height: 3.33em;
+    margin-bottom: 1.33em;
 }
 .containerEmptyNumbers {
-    height: 11em
+    height: 11em;
+    margin-bottom: 1.33em;
 }
 .containerEmptyEquals {
     height: 3.33em;

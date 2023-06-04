@@ -14,7 +14,6 @@ const Equals: FC<EqualsProps> = (props) => {
 
     const {
         isToolsList,
-        isActiveRunTimeMode,
         handleOnDrag
     } = props;
 
@@ -23,35 +22,35 @@ const Equals: FC<EqualsProps> = (props) => {
 
     const equalsClick = () => {
         if(calc.res && calc.num) {
-                switch (calc.sign) {
-                    case '+' : setCalc({
-                        res: calc.res + calc.num,
-                        sign: '',
-                        num: 0
-                    })
-                        break;
-                    case '-' : setCalc({
-                        res: calc.res - calc.num,
-                        sign: '',
-                        num: 0
-                    })
-                        break;
-                    case '*' : setCalc({
-                        res: calc.res * calc.num,
-                        sign: '',
-                        num: 0
-                    })
-                        break;
-                    case '/':  setCalc({
-                        res: calc.res / calc.num,
-                        sign: '',
-                        num: 0
-                    })
-                        break;
-                    default: return
-                }
+            switch (calc.sign) {
+                case '+' : setCalc({
+                    res: Number(calc.res) + Number(calc.num),
+                    sign: '',
+                    num: 0
+                })
+                    break;
+                case '-' : setCalc({
+                    res: Number(calc.res) - Number(calc.num),
+                    sign: '',
+                    num: 0
+                })
+                    break;
+                case '*' : setCalc({
+                    res: Number(calc.res) * Number(calc.num),
+                    sign: '',
+                    num: 0
+                })
+                    break;
+                case '/':  setCalc({
+                    res: Number(calc.res) / Number(calc.num),
+                    sign: '',
+                    num: 0
+                })
+                    break;
+                default: return
             }
         }
+    }
 
     return (
         <div className={isNotActiveDrag ? styles.containerNotDrag : styles.container}

@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: row;
     gap: 0.88em;
+    width: 7em;
     align-items: center;
     cursor: pointer;
     border: 1px solid #F3F4F6;
@@ -37,6 +38,7 @@
     display: flex;
     flex-direction: row;
     gap: 0.88em;
+    width: 8em;
     align-items: center;
     cursor: pointer;
     height: 2.11em;
@@ -46,6 +48,7 @@
 }
 .runtimeButtonActive {
     display: flex;
+    width: 7em;
     flex-direction: row;
     gap: 0.88em;
     align-items: center;
@@ -60,6 +63,7 @@
     display: flex;
     flex-direction: row;
     gap: 0.88em;
+    width: 8em;
     align-items: center;
     cursor: pointer;
     height: 2.11em;

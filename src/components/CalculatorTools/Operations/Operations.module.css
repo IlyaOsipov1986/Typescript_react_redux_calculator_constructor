@@ -5,6 +5,7 @@
     height: 3.33em;
     box-shadow: 1px 1px 4px 2px #00000040;
     padding: 0.22em 0.22em;
+    margin-bottom: 1.33em;
     border-radius: 0.44em;
     cursor: grab;
 }
@@ -16,6 +17,7 @@
     box-shadow: 1px 1px 4px 2px #00000040;
     padding: 0.22em 0.22em;
     border-radius: 0.44em;
+    margin-bottom: 1.33em;
     cursor: initial;
 }
 .operationButton {

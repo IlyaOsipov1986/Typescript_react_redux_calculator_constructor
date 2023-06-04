@@ -3,6 +3,7 @@
     box-shadow: 1px 1px 4px 2px #00000040;
     padding: 0.22em 0.22em;
     border-radius: 0.44em;
+    margin-bottom: 1.33em;
     cursor: grab;
 }
 .displayInput {
@@ -20,6 +21,7 @@
     box-shadow: 1px 1px 4px 2px #00000040;
     padding: 0.22em 0.22em;
     border-radius: 0.44em;
+    margin-bottom: 1.33em;
     cursor: default;
 }
 .displayInputNotDrag {

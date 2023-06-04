@@ -1,11 +1,12 @@
-import {ReactNode} from "react";
+import {Dispatch, SetStateAction} from "react";
 
 export interface ICalcContextProps {
-    children: ReactNode | ReactNode[]
+    calc: calcType
+    setCalc: Dispatch<SetStateAction<calcType>>
 }
 
 export type calcType = {
     sign: string,
-    num: number,
-    res: number
+    num: number | string,
+    res: number | string
 }

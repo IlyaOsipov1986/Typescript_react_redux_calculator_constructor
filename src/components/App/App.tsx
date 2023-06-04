@@ -4,9 +4,11 @@ import ToggleRunTimeConstructor from "../ToggleRunTimeConstructor/ToggleRunTimeC
 import SideBar from "../SideBar/SideBar.tsx";
 import Canvas from "../Canvas/Canvas.tsx";
 import {IToolList} from "../../types/toolList.tsx";
+import useCalculatorContext from "../../utils/CustomHooks/useCalculatorContext/useCalculatorContext.tsx";
 
 const App: FC = () => {
 
+    const {setCalc} = useCalculatorContext();
     const [isToolsList, setToolsList] = useState<IToolList[]>([]);
     const [isActiveRunTimeMode, setActiveRunTimeMode] = useState(false);
 
@@ -28,18 +30,19 @@ const App: FC = () => {
         setActiveRunTimeMode(false);
         setActiveConstrMode(true);
         setRunTimeMode(false);
+        setCalc({sign: '', num: 0, res: 0 });
     }
 
     const onHandleToggleRunTime = (setActiveToggleRunTime: (mode: boolean) => void, setActiveToggleConstructor: (mode: boolean) => void) => {
-        setActiveRunTimeMode(true)
-        setActiveToggleRunTime(true)
-        setActiveToggleConstructor(false)
+        setActiveRunTimeMode(true);
+        setActiveToggleRunTime(true);
+        setActiveToggleConstructor(false);
     }
 
     const onHandleToggleConstructor = (setActiveToggleRunTime: (mode: boolean) => void, setActiveToggleConstructor: (mode: boolean) => void) => {
-        setActiveRunTimeMode(false)
-        setActiveToggleRunTime(false)
-        setActiveToggleConstructor(true)
+        setActiveRunTimeMode(false);
+        setActiveToggleRunTime(false);
+        setActiveToggleConstructor(true);
     }
 
     return (
