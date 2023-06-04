@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 18em;
+}
+.containerRunTimeMode {
+    display: flex;
+    flex-direction: column;
+    width: 18em;
+    pointer-events: none;
+}
+.containerRunTimeMode div:nth-child(1) {
+    box-shadow: none;
+}
+.containerRunTimeMode div:nth-child(2) {
+    box-shadow: none;
+}
+.containerRunTimeMode div:nth-child(3) {
+    box-shadow: none;
+}
+.containerRunTimeMode div:nth-child(4) {
+     box-shadow: none;
+}

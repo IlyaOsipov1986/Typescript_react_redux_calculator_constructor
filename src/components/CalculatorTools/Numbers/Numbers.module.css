@@ -1,0 +1,38 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.88em;
+    box-shadow: 1px 1px 4px 2px #00000040;
+    padding: 0.22em 0.22em;
+    margin-bottom: 1.33em;
+    border-radius: 0.44em;
+    cursor: grab;
+}
+.containerNotDrag {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.88em;
+    box-shadow: 1px 1px 4px 2px #00000040;
+    padding: 0.22em 0.22em;
+    margin-bottom: 1.33em;
+    border-radius: 0.44em;
+    cursor: default;
+}
+.numberButtons {
+    border: 1px solid #E2E3E5;
+    border-radius: 0.33em;
+    width: 4em;
+    height: 2.66em;
+    cursor: grab;
+}
+.numberButtonsNotDrag {
+    border: 1px solid #E2E3E5;
+    border-radius: 0.33em;
+    width: 4em;
+    height: 2.66em;
+    cursor: default;
+}
+/*.numberButtonsNotDrag:active {*/
+/*    background: #5D5FEF;*/
+/*    color: #FFFFFF;*/
+/*}*/

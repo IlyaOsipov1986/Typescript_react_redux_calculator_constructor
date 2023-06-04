@@ -1,0 +1,83 @@
+.container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.33em;
+}
+.containerReset {
+    cursor: pointer;
+    width: 1.33em;
+    height: 1.33em;
+}
+.containerResetHide {
+    visibility: hidden;
+}
+.containerButtonsBlock {
+    display: inline-flex;
+}
+.buttonsBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #F3F4F6;
+    height: 2.11em;
+    border-radius: 0.44em;
+}
+.runtimeButton {
+    display: flex;
+    flex-direction: row;
+    gap: 0.88em;
+    width: 7em;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #F3F4F6;
+    border-radius: 0.44em;
+    padding: 0 0.66em 0 0.66em;
+}
+.constructorButton {
+    display: flex;
+    flex-direction: row;
+    gap: 0.88em;
+    width: 8em;
+    align-items: center;
+    cursor: pointer;
+    height: 2.11em;
+    border: 1px solid #F3F4F6;
+    border-radius: 0.44em;
+    padding: 0 0.66em 0 0.66em;
+}
+.runtimeButtonActive {
+    display: flex;
+    width: 7em;
+    flex-direction: row;
+    gap: 0.88em;
+    align-items: center;
+    cursor: pointer;
+    height: 2.11em;
+    background: #FFFFFF;
+    border: 1px solid #E2E3E5;
+    border-radius: 0.44em;
+    padding: 0 0.66em 0 0.66em;
+}
+.constructorButtonActive {
+    display: flex;
+    flex-direction: row;
+    gap: 0.88em;
+    width: 8em;
+    align-items: center;
+    cursor: pointer;
+    height: 2.11em;
+    background: #FFFFFF;
+    border: 1px solid #E2E3E5;
+    border-radius: 0.44em;
+    padding: 0 0.66em 0 0.66em;
+}
+.buttonsText {
+    font-weight: 600;
+    font-size: 0.77em;
+    color: #4D5562;
+}
+.iconButtons {
+    height: 1.11em;
+    width: 1.11em;
+}
